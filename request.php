@@ -13,4 +13,16 @@ function openDB() {
 
     return $con;
 }
+function generateContactInfo() {
+    $db = openDB();
+    $sql = $db->prepare("SELECT nom, prenom, mail, tel FROM intranettable");
+    $sql->execute();
+    $resultQuery = $sql->get_result();
+    while ($row = mysqli_fetch_assoc($resultQuery)) {    
+        echo "<div class='contactinfo'>" .
+            "<p class='name'>" . $row["nom"] . " " . $row["prenom"] . "</p>" .
+            "<p class='mail'>" . $row["mail"] . "</p>" .
+            "<p class='tel'>" . $row["tel"] . "</p></div>";
+    }
+}           
 ?>
