@@ -1,4 +1,7 @@
-<?php require_once "request.php" ?>
+<?php 
+require_once "request.php" ;
+session_start()
+?>
 
 <!DOCTYPE html>
 <html>

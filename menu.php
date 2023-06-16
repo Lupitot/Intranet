@@ -1,4 +1,7 @@
-<?php ?>
+<?php 
+require_once "request.php";
+session_start()
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +18,9 @@
     <header>
         <?php include "header.php" ?>
     </header>
-
+    <h1>
+        <?php echo "Welcome " . $_SESSION['nom'] . " " . $_SESSION['prenom']?>
+    </h1>
     <div class="content">
         <div class="newsletter"></div>
         <div class="app">
