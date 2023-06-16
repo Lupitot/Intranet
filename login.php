@@ -14,11 +14,6 @@ session_start();
 </head>
 
 <body>
-
-    <header>
-        <?php include "header.php" ?>
-    </header>
-
     <form method="POST">
         <label for="mail">Mail</label>
         <input type="text" name="mail" id="mail" placeholder="mail" required>
