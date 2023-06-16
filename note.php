@@ -5,7 +5,7 @@ session_start();
 <?php function addNote(){
     $db = openDB();
     if (isset($_POST["auteurInput"])) {
-        $auteur = $_SESSION["name"];
+        $auteur = strip_tags($_POST["auteurInput"]);
         $note = strip_tags($_POST["noteInput"]);
         $acces = strip_tags($_POST["accesInput"]);
         $stmt = $db->prepare("INSERT INTO note (auteur, note, acces) VALUES (?,?,?)");
@@ -34,6 +34,7 @@ session_start();
     </header>
     
     <form method="POST" class="addingform">
+        <input type="hidden" id="auteurInput" name="auteurInput" value="<?php echo $_SESSION['nom'] ?>">
         Note : <input class="addinput" type="text" id="noteInput" name="noteInput"><br>
         Acces : <input class="addinput" type="text" id="accesInput" name="accesInput"><br>
         <input type="submit" value="Submit">
