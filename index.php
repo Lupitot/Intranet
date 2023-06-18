@@ -1,5 +1,6 @@
 <?php
     require_once "request.php";
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +44,6 @@
                     $_SESSION['grade'] = $row['grade'];
                     $_SESSION['id'] = $row['id'];
                     header("Location: menu.php");
-                    session_start();
                 } else {
                     echo "Login failed";
                 }

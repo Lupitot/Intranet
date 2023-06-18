@@ -31,7 +31,6 @@ session_start()
             <a href="mailbox.php" class="mailbox">mailbox</a>
             <a href="agenda.php" class="agenda">agenda</a>
             <a href="note.php" class="note">note</a>
-            <a href="folder.php" class="folder">folder </a>
         </div>
     </div>
 </body>

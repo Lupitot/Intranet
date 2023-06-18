@@ -1,6 +1,12 @@
 <?php
 require_once "request.php";
 ?>
+
+<?php 
+    if(!isset($_SESSION['nom']) && !isset($_SESSION['prenom'])){
+        header("Location: index.php");
+    }
+?>
 <!DOCTYPE html>
 <html>
 
@@ -28,6 +34,8 @@ require_once "request.php";
             Logout
         </a>
     </span>
+
+    
 </header>
 
 </html>
