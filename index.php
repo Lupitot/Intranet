@@ -1,5 +1,6 @@
 <?php
     require_once "request.php";
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,26 +25,14 @@
             <input type="submit" class="btn" value="Login" name="login">
 
             <?php if (isset($_POST['login'])) {
-                echo "loginTest";
-                echo "loginTest2";
                 $mail = $_POST['mail'];
                 $password = $_POST['password'];
                 $db = openDB();
-                echo "loginTest3";
                 $sql = $db->prepare("SELECT * FROM intranettable WHERE mail = ? AND MDP = ?");
-                echo "loginTest4";
-                if ($sql->errno)
-                    echo "SQL error: " . $sql->error;
                 $sql->bind_param("ss", $mail, $password);
-                if ($sql->errno)
-                    echo "SQL error: " . $sql->error;
-                echo "5";
                 $sql->execute();
-                echo "6";
                 $resultQuery = $sql->get_result();
-                echo "7";
                 $row = mysqli_fetch_assoc($resultQuery);
-                echo "loginTest5";
                 if ($row) {
                     echo "Login successful";
                     $_SESSION['mail'] = $mail;
@@ -55,7 +44,6 @@
                     $_SESSION['grade'] = $row['grade'];
                     $_SESSION['id'] = $row['id'];
                     header("Location: menu.php");
-                    session_start();
                 } else {
                     echo "Login failed";
                 }
