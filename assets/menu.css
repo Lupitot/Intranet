@@ -16,6 +16,7 @@ body {
     width: 100%;
     height: 100vh;
     background: var(--color-1);
+    font-family: 'Poppins', sans-serif;
 }
 
 .content {
@@ -34,12 +35,39 @@ body {
 
 .newsletter {
     width: 45%;
-    height: 25rem;
+    height: 25vw;
     background: var(--color-3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: center;
+
+}
+
+.newsletter p {
+    font-size: 2vw;
+    font-weight: 100;
+    color: #e3e2e2;
+    margin-bottom: 1rem;
+}
+
+.newsletter img {
+    position: relative;
+    width: 22vw;
+    height: 20vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+.newsletter img:hover {
+    transform: translate(1px, 2px);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.7);
+    transition: all 0.2s ease-in-out;
 }
 
 .app {
@@ -50,7 +78,7 @@ body {
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
-    background: fuchsia;
+    background: var(--color-2);
 }
 
 .app a {
@@ -61,5 +89,12 @@ body {
     color: #fff;
     width: 8rem;
     height: 8rem;
-    background: var(--color-4);
+    background: var(--color-3);
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.7);
 }
+
+.app a:hover {
+    transform: translate(1px, 2px);
+    box-shadow: inset 0px 0px 3px 3px rgba(0,0,0,0.8);
+}   
