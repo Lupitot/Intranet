@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #1E0E27;
+    --color-2: #3E065F;
+    --color-3: #700B97;
+    --color-4: #8E05C2;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-1);
+    color: #e3e2e2;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addinput {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#noteInput {
+    width: 900px;
+    height: 200px;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e3e2e2;
+    background: var(--color-2);
+    max-width: 1200px;
+    max-height: 350px;
+    min-width: 500px;
+    min-height: 100px;
+    border: 1px solid var(--color-4);
+    box-shadow: 0px 0px 7px 2px rgba(37, 37, 37, 0.87);
+    margin-top: 0.3rem;
+
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#noteInput:focus {
+    box-shadow: inset 0 0 2px 3px rgba(0, 0, 0, 0.7);
+    border: none;
+}
+
+#accesInput {
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--color-2);
+    color: #e3e2e2;
+    font-weight: 300;
+    box-shadow: 0px 0px 7px 2px rgba(37, 37, 37, 0.87);
+    padding: 10px;
+    border: 1px solid var(--color-4);
+}
+
+#accesInput:focus {
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.7);
+    background: var(--color-2);
+    border: none;
+}
+
+.submitButton {
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: var(--color-2);
+    color: #e3e2e2;
+    font-weight: 300;
+    box-shadow: 0px 0px 7px 2px rgba(37, 37, 37, 0.87);
+    padding: 10px;
+    border: 1px solid var(--color-4);
+    margin-left: 0.5rem;
+}
+
+.submitButton:focus {
+    box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.7);
+    border: none;
+}
+
+.bottom {
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

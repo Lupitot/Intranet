@@ -13,15 +13,21 @@ require_once "request.php";
 </head>
 
 <header>
-    <a href="menu.php">
-        <h1>✨Intranet✨</h1>
-    </a>
-    <h2>
-        <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom'] ?>
-    </h2>
-    <div class="logout">
-        <a href="logout.php">logout</a>
-    </div>
+    <span>
+        <a href="menu.php" class="backMenu">
+            <h1>✨Intranet✨</h1>
+        </a>
+    </span>
+    <span>
+        <h2 class="sessionName">
+            <?php echo $_SESSION['nom'] . " " . $_SESSION['prenom'] ?>
+        </h2>
+    </span>
+    <span>
+        <a href="logout.php" class="logout">
+            Logout
+        </a>
+    </span>
 </header>
 
 </html>
