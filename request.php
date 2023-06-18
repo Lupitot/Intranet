@@ -3,7 +3,7 @@ function openDB()
 {
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "raspberry";
     $dbname = "intranet";
 
     try {
