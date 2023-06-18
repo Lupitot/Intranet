@@ -124,9 +124,6 @@ label {
     position: absolute;
     bottom: 2rem;
     right: 2rem;
-}
-
-.seeNote:hover {
     cursor: pointer;
 }
 
