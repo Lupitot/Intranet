@@ -1,7 +1,7 @@
-<?php 
+<?php
 require_once "request.php";
 session_start()
-?>
+    ?>
 <!DOCTYPE html>
 <html>
 
@@ -19,10 +19,13 @@ session_start()
         <?php include "header.php" ?>
     </header>
     <h1>
-        <?php echo "Welcome " . $_SESSION['nom'] . " " . $_SESSION['prenom']?>
+        <?php echo "Welcome " . $_SESSION['nom'] . " " . $_SESSION['prenom'] ?>
     </h1>
     <div class="content">
-        <div class="newsletter"></div>
+        <div class="newsletter">
+            <img src="./assets/img/Salam6.png" alt="Image d'une personne heureuse pour promouvoir l'entreprise ">
+            <p>Subscribe to our newsletter to receive the latest news.</p>
+        </div>
         <div class="app">
             <a href="contact.php" class="contact">contact</a>
             <a href="mailbox.php" class="mailbox">mailbox</a>

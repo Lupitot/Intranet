@@ -24,5 +24,19 @@ function generateContactInfo() {
             "<p class='mail'>" . $row["mail"] . "</p>" .
             "<p class='tel'>" . $row["tel"] . "</p></div>";
     }
-}           
+}  
+
+function generateEvent() {
+    $db = openDB();
+    $sql = $db->prepare("SELECT * FROM agenda_event");
+    $sql->execute();
+    $resultQuery = $sql->get_result();
+    while ($row = mysqli_fetch_assoc($resultQuery)) {    
+        echo "<div class='event'>" .
+            "<p class='date'>" . $row["Date"] . "</p>" .
+            "<p class='title'>" . $row["NameOfEvent"] . "</p>" .
+            "<p class='creationDate'>" . $row["CreationDate"] . "</p>".
+            "<p class='author'>". $row["Author"] ."</div>";
+    }
+}
 ?>
