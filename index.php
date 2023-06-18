@@ -1,6 +1,5 @@
 <?php
-require_once "request.php";
-session_start();
+    require_once "request.php";
 ?>
 <!DOCTYPE html>
 <html>
