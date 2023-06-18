@@ -22,14 +22,19 @@ function openDB()
 function generateContactInfo()
 {
     $db = openDB();
-    $sql = $db->prepare("SELECT nom, prenom, mail, tel FROM intranettable");
+    $sql = $db->prepare("SELECT * FROM intranettable");
     $sql->execute();
     $resultQuery = $sql->get_result();
     while ($row = mysqli_fetch_assoc($resultQuery)) {
         echo "<div class='contactinfo'>" .
             "<p class='name'>" . $row["nom"] . " " . $row["prenom"] . "</p>" .
             "<p class='mail'>" . $row["mail"] . "</p>" .
-            "<p class='tel'>" . $row["tel"] . "</p></div>";
+            "<p class='tel'>" . $row["tel"] . "</p>" . 
+            "<form method='POST' action='deleteUser.php'>" . 
+                "<button class='delete' name='delete' value='" . $row["id"] . "'>Delete</button>" .
+            "</form>" .     
+            
+            "</div>";
     }
 }
 
@@ -61,4 +66,12 @@ function generatePersonalNote($Author)
             "<p class='textNote'>" . $row["note"] . "</p>" . "</div>";
     }
 }
+
+function deleteContact(int $id) {
+    $db = openDB();
+    $sql = $db->prepare("DELETE FROM intranettable WHERE id = ?");
+    $sql->execute([$id]);
+}
+
+
 ?>
