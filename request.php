@@ -2,17 +2,22 @@
 function openDB()
 {
     $servername = "localhost";
-    $username = "root";
+    $username = "Pi";
     $password = "raspberry";
     $dbname = "intranet";
 
     try {
-        $con = new mysqli($servername, $username, $password, $dbname);
+        $conn = new mysqli($servername, $username, $password, $dbname);
     } catch (Exception $e) {
+        echo "Connection failed: " . $e->getMessage();
         die("couldn't connect to DB: " . $e->getMessage());
     }
+    if ($conn->connect_errno)
+        {
+            echo "Failed to connect to MySQL: " . $conn->connect_error;
+        }
 
-    return $con;
+    return $conn;
 }
 function generateContactInfo()
 {
