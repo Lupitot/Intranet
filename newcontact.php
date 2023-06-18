@@ -51,7 +51,8 @@ session_start()
         </span>
         <input type="submit" class="btn" value="Submit">
     </form>
-    <?php addContact(); ?>
+        <?php addContact(); ?>
+    
 </body>
 
 </html>
