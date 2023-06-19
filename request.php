@@ -43,8 +43,8 @@ function generateEvent()
         echo "<div class='event'>" .
             "<p class='date'>" . $row["Date"] . "</p>" .
             "<p class='title'>" . $row["NameOfEvent"] . "</p>" .
-            "<p class='creationDate'>" . $row["CreationDate"] . "</p>" .
-            "<p class='author'>" . $row["Author"] . "</div>";
+            "<p class='creationDate'> Créé le : <br>" . $row["CreationDate"] . "</p>" .
+            "<p class='author'> Par : <br>" . $row["Author"] . "</div>";
     }
 }
 
